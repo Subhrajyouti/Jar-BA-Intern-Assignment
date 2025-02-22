@@ -1,8 +1,8 @@
-Below is an example of a GitHub README.md file that mirrors the content of the PDF while incorporating images. You can adjust image paths as needed (e.g., place your screenshots or diagrams inside an `images` folder in your repo).
 
----
 
-# Subhrajyoti Mahanta Assignment for Jar Business Analyst Internship
+
+
+#  Assignment by Subhrajyoti Mahanta for Jar Business Analyst Internship
 
 ![alt text](image.png)
 
