@@ -4,7 +4,7 @@ Below is an example of a GitHub README.md file that mirrors the content of the P
 
 # Subhrajyoti Mahanta Assignment for Jar Business Analyst Internship
 
-![Jar Logo](images/jar-logo.png)
+![alt text](image.png)
 
 ## Introduction
 
@@ -27,7 +27,7 @@ To derive meaningful insights from the data, I followed these key steps:
 2. **Created a PostgreSQL Database**
 3. **Extracted Relevant Information with SQL Queries**
 
-![Data Insights Approach](images/approach-diagram.png)
+![alt text](image-1.png)
 
 ---
 
@@ -38,26 +38,34 @@ To derive meaningful insights from the data, I followed these key steps:
 - **Merge Orders and Order Details**  
   *SQL Query:*  
   ```sql
-  -- SQL code to merge orders with order details on Order ID
+  SELECT *
+  FROM order_details
+  JOIN list_of_orders ON list_of_orders.orderid= order_details.orderid;
   ```
   *Results:*  
-  *(Screenshot or table output can be placed here.)*
+  ![alt text](image-2.png)
 
 - **Total Sales for Each Category**  
   *SQL Query:*  
   ```sql
-  -- SQL code to calculate total sales amount for each category
+  SELECT category,sum(Amount)
+  FROM order_details
+  GROUP BY category;
   ```
   *Results:*  
-  *(Screenshot or table output can be placed here.)*
+  ![alt text](image-3.png)
 
 - **Average Profit per Order & Total Profit Margin**  
   *SQL Query:*  
   ```sql
-  -- SQL code to calculate average profit and profit margin per category
+  SELECT category,sum(amount), round(avg(profit)::numeric,2) as   avg_of_profit,
+       round(sum(profit::numeric/Amount::numeric)::numeric,2) as total_profit_mergin 
+       FROM order_details
+       GROUP BY category;   
   ```
   *Results:*  
-  *(Screenshot or table output can be placed here.)*
+  ![alt text](image-4.png)
+  
 
 - **Analysis and Recommendations:**  
   - **Best Performer: Clothing**  
@@ -79,10 +87,33 @@ To derive meaningful insights from the data, I followed these key steps:
 - **Monthly Percentage Change in Furniture Sales Target**  
   *SQL Query:*  
   ```sql
-  -- SQL code to calculate month-over-month percentage change in targets for Furniture
+   with a as 
+   (    SELECT 
+           months,
+            to_char(months, 'Mon YYYY') AS month_year,
+            TARGET, 
+            lag(TARGET,1,0) OVER ( ORDER BY months) as past_target
+    FROM 
+            sales_target
+     WHERE 
+            category ='Furniture' 
+        )    
+        
+    SELECT month_year,
+       round((target-past_target)::numeric/target::numeric,4)*100  as percent_target_change
+   FROM  a           
+   join order_details as o on o.   
+   WHERE  past_target >0  ;
+
+   SELECT   to_char(l.OrderDate, 'Mon YYYY') AS month_year,
+         sum(amount)
+         FROM order_details as o
+         join list_of_orders as l on l.orderid=o.orderid
+           WHERE category = 'Furniture'
+         GROUP by month_year;
   ```
   *Results:*  
-  *(Screenshot or table output can be placed here.)*
+  ![alt text](image-5.png)
 
 - **Trend Analysis:**  
   - **Modest Increases:** Most months show a gradual increase of about 0.87% to 0.96%.  
@@ -99,10 +130,18 @@ To derive meaningful insights from the data, I followed these key steps:
 - **Top 5 States by Order Count:**  
   *SQL Query:*  
   ```sql
-  -- SQL code to identify the top 5 states by order count and calculate total sales and average profit
+  SELECT state,
+        count(DISTINCT l.orderid) as orders,
+        sum(o.amount) as total_sales,
+        round(avg(profit)::numeric,2)  as average_profit
+   FROM list_of_orders as l
+   JOIN order_details as o on o.orderid=l.orderid
+    GROUP BY state
+    ORDER BY orders DESC
+    LIMIT 5;
   ```
   *Results:*  
-  *(Screenshot or table output can be placed here.)*
+  ![alt text](image-6.png)
 
 - **Regional Disparities & Recommendations:**  
   - **Strong Performance Regions:**  
@@ -139,7 +178,7 @@ To derive meaningful insights from the data, I followed these key steps:
 5. **Upcoming Loan Feature – A Game Changer?**  
    There’s an in-development loan section that, if executed well, could provide emergency funds (under ₹1 lakh) with low interest—highly beneficial for college students.
 
-![Jar App Interface](images/jar-app-ui.png)
+![alt text](image-7.png)
 
 ### Areas for Improvement
 
@@ -185,7 +224,7 @@ With a strong user base established, Jar can further expand its ecosystem. Here 
    - **Vision:** Leverage the trusted database and user base to offer stock brokerage services with a simple, low-entry trading interface.  
    - **Impact:** Complements the existing savings and investment products, creating a holistic financial ecosystem.
 
-![Product Expansion Diagram](images/product-expansion.png)
+
 
 ---
 
@@ -203,7 +242,8 @@ Thank you for considering my application for the Business Analyst Internship at 
 
 *Subhrajyoti Mahanta*  
 *Business Analyst Intern Applicant*  
-
+subhrajyoutimahanta@gmail.com
+https://www.linkedin.com/in/subhrajyotimahanta/
 ---
 
-Feel free to modify and add any additional images or sections to best suit your repository's structure.
+

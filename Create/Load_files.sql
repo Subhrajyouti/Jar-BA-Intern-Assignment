@@ -30,3 +30,7 @@ CREATE TABLE Sales_target (
 copy Sales_Target(Month,Category,Target)
 FROM 'E:\Jar BA Intern Assignment\Sales_target_DD2E9B96A0.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',');
+
+ALTER TABLE sales_target
+rename month to months
+
