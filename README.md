@@ -1,96 +1,209 @@
-# Jar Business Analyst Intern Assignment
-
-Welcome to the repository for my Business Analyst Intern Assignment at Jar. This project demonstrates my ability to analyze complex datasets using SQL and PostgreSQL to derive actionable insights and strategic recommendations.
-
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Datasets](#datasets)
-- [Assignment Problems](#assignment-problems)
-- [Approach and Methodology](#approach-and-methodology)
-- [SQL Scripts and Analysis](#sql-scripts-and-analysis)
-- [Results and Insights](#results-and-insights)
-- [Repository Structure](#repository-structure)
-- [Conclusion](#conclusion)
-- [Contact Information](#contact-information)
-
-## Project Overview
-
-This project was developed as part of the selection process for the Business Analyst Intern position at Jar. The primary objective is to extract, transform, and analyze data from multiple datasets to:
-- Evaluate sales performance and profitability by category.
-- Analyze target achievement trends for the Furniture category.
-- Examine regional performance insights to identify key opportunities for improvement.
-
-## Datasets
-
-The analysis leverages the following datasets:
-- **List of Orders**: Contains order-level information.
-- **Order Details**: Includes detailed data such as sales amounts and profit figures.
-- **Sales Target**: Provides monthly sales target data for various categories.
-
-## Assignment Problems
-
-### Part 1: Sales and Profitability Analysis
-- **Data Integration**: Merge the *List of Orders* and *Order Details* datasets on the basis of Order ID.
-- **Sales Calculation**: Calculate the total sales (Amount) for each category across all orders.
-- **Profit Metrics**: Determine the average profit per order and compute the total profit margin (profit as a percentage of sales).
-- **Performance Evaluation**: Identify top-performing and underperforming categories and provide insights into the reasons behind the observed performance differences.
-
-### Part 2: Target Achievement Analysis
-- **Target Change Calculation**: Using the *Sales Target* dataset, compute the percentage change in target sales for the Furniture category on a month-over-month basis.
-- **Trend Analysis**: Identify months with significant target fluctuations and suggest strategies to better align target expectations with actual performance trends.
-
-### Part 3: Regional Performance Insights
-- **State-Level Analysis**: From the *List of Orders* dataset, identify the top 5 states with the highest order counts. For each state, calculate the total sales and average profit.
-- **Regional Disparities**: Highlight any differences in sales or profitability among regions and recommend areas (states/cities) that should be prioritized for improvement.
-
-## Approach and Methodology
-
-1. **Data Integration**: Merged the orders and order details datasets on Order ID to build a comprehensive view of sales performance.
-2. **Data Transformation**: Employed SQL queries to aggregate and compute key metrics such as total sales, average profit, and profit margins.
-3. **Trend Analysis**: Calculated month-over-month percentage changes in sales targets to assess target achievement trends.
-4. **Regional Analysis**: Aggregated data by state to identify regional disparities and suggest targeted improvement strategies.
-
-## SQL Scripts and Analysis
-
-The repository includes SQL scripts for each part of the analysis:
-- **Part 1:** `SQL_Scripts/part1_sales_profitability.sql` – Contains queries for merging datasets, computing total sales, average profit per order, and profit margins.
-- **Part 2:** `SQL_Scripts/part2_target_achievement.sql` – Contains queries for calculating month-over-month changes in the Furniture category’s sales targets and trend analysis.
-- **Part 3:** `SQL_Scripts/part3_regional_insights.sql` – Contains queries for aggregating state-level data to evaluate regional performance.
-
-## Results and Insights
-
-- **Sales and Profitability:**  
-  Clothing emerged as the top-performing category with a high profit margin, while Furniture underperformed due to lower average profits and negative margins. Electronics, despite high per-transaction profits, showed a slight overall margin deficit possibly due to high operating costs or discounting practices.
-  
-- **Target Achievement:**  
-  Analysis of the Furniture category revealed months with significant percentage changes in sales targets. These fluctuations suggest a need for more dynamic and data-driven target-setting processes.
-  
-- **Regional Performance:**  
-  While states like Madhya Pradesh and Maharashtra performed strongly in terms of order volume and profitability, regions such as Punjab and Gujarat require focused interventions to address lower sales and negative profitability.
-
-## Repository Structure
-
-```
-├── README.md
-├── SQL_Scripts
-│   ├── part1_sales_profitability.sql
-│   ├── part2_target_achievement.sql
-│   └── part3_regional_insights.sql
-└── Documentation
-    └── Assignment_Report.pdf
-```
-
-## Conclusion
-
-This project showcases the application of SQL and PostgreSQL for effective data analysis, enabling actionable insights across sales performance, target achievement, and regional disparities. The findings and recommendations aim to support data-driven decision-making at Jar.
-
-## Contact Information
-
-**Subhrajyoti Mahanta**  
-Email: [your.email@example.com](mailto:your.email@example.com)  
-LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com)
+Below is an example of a GitHub README.md file that mirrors the content of the PDF while incorporating images. You can adjust image paths as needed (e.g., place your screenshots or diagrams inside an `images` folder in your repo).
 
 ---
 
-Thank you for reviewing my assignment. I look forward to the opportunity to contribute to Jar's continued success!
+# Subhrajyoti Mahanta Assignment for Jar Business Analyst Internship
+
+![Jar Logo](images/jar-logo.png)
+
+## Introduction
+
+I am delighted to submit my assignment for the Business Analyst Intern position at Jar. I would like to extend my heartfelt thanks to the Jar team for giving me this opportunity to demonstrate my skills and to be a part of such an innovative organization.
+
+In this assignment, I have addressed the technical challenges using PostgreSQL. I created a robust relational database to efficiently store and manage the relevant data, including orders, order details, and sales targets. By leveraging SQL, I was able to merge datasets, perform complex queries, and extract valuable insights required to solve the given problems.
+
+This project not only allowed me to showcase my proficiency in database design and data querying but also provided a platform to apply analytical techniques to real-world business scenarios.
+
+> **Access the GitHub Repository for this Assignment:**  
+> [https://github.com/Subhrajyouti/Jar-BA-Intern-Assignment](https://github.com/Subhrajyouti/Jar-BA-Intern-Assignment)
+
+---
+
+## Approach for Getting Data Insights
+
+To derive meaningful insights from the data, I followed these key steps:
+
+1. **Stored Relevant Data in the Database**
+2. **Created a PostgreSQL Database**
+3. **Extracted Relevant Information with SQL Queries**
+
+![Data Insights Approach](images/approach-diagram.png)
+
+---
+
+## Question 1: Sales Analysis
+
+### Part 1: Sales and Profitability Analysis
+
+- **Merge Orders and Order Details**  
+  *SQL Query:*  
+  ```sql
+  -- SQL code to merge orders with order details on Order ID
+  ```
+  *Results:*  
+  *(Screenshot or table output can be placed here.)*
+
+- **Total Sales for Each Category**  
+  *SQL Query:*  
+  ```sql
+  -- SQL code to calculate total sales amount for each category
+  ```
+  *Results:*  
+  *(Screenshot or table output can be placed here.)*
+
+- **Average Profit per Order & Total Profit Margin**  
+  *SQL Query:*  
+  ```sql
+  -- SQL code to calculate average profit and profit margin per category
+  ```
+  *Results:*  
+  *(Screenshot or table output can be placed here.)*
+
+- **Analysis and Recommendations:**  
+  - **Best Performer: Clothing**  
+    Clothing shows moderate sales with a high overall profit margin (39.22%). Its success indicates low costs and high demand.
+  
+  - **Mixed Results: Electronics**  
+    Despite the highest sales (165,267) and average profit (34.07), the overall profit margin is negative (-1.92%), suggesting issues like high operating costs and discounting.
+  
+  - **Worst Performer: Furniture**  
+    Furniture records the lowest mean profit (-16.50) and a highly negative profit margin, pointing to issues in cost management and pricing.
+
+  **Recommendations:**  
+  - For **Electronics**, review discounting strategies and operational costs.  
+  - For **Furniture**, re-evaluate cost structures, supply chain inefficiencies, and pricing policies.  
+  - Emulate successful strategies from the **Clothing** segment where feasible.
+
+### Part 2: Target Achievement Analysis
+
+- **Monthly Percentage Change in Furniture Sales Target**  
+  *SQL Query:*  
+  ```sql
+  -- SQL code to calculate month-over-month percentage change in targets for Furniture
+  ```
+  *Results:*  
+  *(Screenshot or table output can be placed here.)*
+
+- **Trend Analysis:**  
+  - **Modest Increases:** Most months show a gradual increase of about 0.87% to 0.96%.  
+  - **Significant Fluctuations:** Notable spikes in July 2018, November 2018, and March 2019.  
+  - **Discrepancies:** Some months, such as July 2018, have a huge gap between target and actual sales, while January 2019 showed overperformance.
+
+  **Recommendations:**  
+  - **Data-Driven Target Setting:** Use historical trends and seasonality to refine targets.  
+  - **Regular Reviews:** Conduct monthly or quarterly target revisions.  
+  - **Incorporate External Factors:** Adjust targets based on economic, marketing, and competitive insights.
+
+### Part 3: Regional Performance Insights
+
+- **Top 5 States by Order Count:**  
+  *SQL Query:*  
+  ```sql
+  -- SQL code to identify the top 5 states by order count and calculate total sales and average profit
+  ```
+  *Results:*  
+  *(Screenshot or table output can be placed here.)*
+
+- **Regional Disparities & Recommendations:**  
+  - **Strong Performance Regions:**  
+    - **Madhya Pradesh:** Highest order count (101) and total sales (105,140).  
+    - **Maharashtra:** Second-best with 90 orders and the highest profit percentage (21.3%).
+  
+  - **Low Performing Regions:**  
+    - **Rajasthan & Gujarat:** Fewer orders and low profit percentages (e.g., Gujarat at 5.34%).  
+    - **Punjab:** Loss-making with only 25 orders and a -10% profit margin.
+
+  **Recommendations:**  
+  - **Punjab:** Re-assess pricing, operational costs, and product mix.  
+  - **Gujarat:** Analyze cost structures and optimize operations.  
+  - **Overall:** Leverage strategies from high-performing regions to uplift the underperforming ones.
+
+---
+
+## Question 2: App Exploration
+
+### User-Friendly Features Found After Testing the Jar App
+
+1. **Low Entry Barrier – Perfect for Students and Bachelors**  
+   Jar allows saving and investing starting with just ₹10, making it very accessible for students and young professionals.
+
+2. **CIBIL Score Without Aadhaar or PAN**  
+   I was impressed that the app displays my CIBIL score instantly without needing Aadhaar or PAN details, streamlining the credit evaluation process.
+
+3. **Efficient EMI Calculator**  
+   The in-app EMI calculator effectively breaks down monthly payments, aiding in budgeting and financial planning.
+
+4. **Attractive and Seamless UI**  
+   The app's interface is visually appealing and intuitive, making navigation between savings, investments, and future loan options smooth and engaging.
+
+5. **Upcoming Loan Feature – A Game Changer?**  
+   There’s an in-development loan section that, if executed well, could provide emergency funds (under ₹1 lakh) with low interest—highly beneficial for college students.
+
+![Jar App Interface](images/jar-app-ui.png)
+
+### Areas for Improvement
+
+1. **Privacy Concern with CIBIL Score**  
+   Displaying the CIBIL score without identity verification raises privacy issues. More transparency is needed on data sourcing and security.
+
+2. **Customer Care Button Issue**  
+   The customer care button caused the app to buffer and freeze, which is problematic for an app dealing with financial data and transactions.
+
+3. **High Charges for a Low-Income User Base**  
+   Given that many users are students or low-income earners, reducing transaction fees could make the app more attractive and accessible.
+
+4. **Withdrawal Waiting Period**  
+   The current wait time for processing withdrawals is longer than necessary. Shortening this period would improve user satisfaction.
+
+5. **Enhanced Budget Tracking**  
+   In addition to the monthly expense tracker, adding functionality to create and manage budgets for specific categories (e.g., food, travel, rent) would empower users to better control their finances.
+
+---
+
+## Question 3: Product Exploration
+
+With a strong user base established, Jar can further expand its ecosystem. Here are some new business opportunities to consider:
+
+1. **Financial Literacy Programs**  
+   - **Target Audience:** Students and households.  
+   - **Initiative:** Launch courses, webinars, and mentorship sessions on investing, budgeting, and overall financial planning.  
+   - **Benefit:** Increases user engagement and builds long-term loyalty.
+
+2. **Diversified Investment Opportunities**  
+   - **Proposal:** Introduce fractional investments in real estate and bonds with low entry barriers.  
+   - **Advantage:** Enables portfolio diversification for users with limited funds.
+
+3. **Micro-Lending Systems**  
+   - **Concept:** Offer small, unsecured loans based on users’ savings and transaction behavior.  
+   - **Outcome:** Provides financial flexibility while reinforcing Jar’s image as a comprehensive financial partner.
+
+4. **Integrated Payment Solutions via UPI**  
+   - **Implementation:** Incorporate UPI integration to allow users to make payments directly using their Jar balance.  
+   - **Result:** Enhances daily app engagement and increases transaction volume.
+
+5. **Stock Broking Services**  
+   - **Vision:** Leverage the trusted database and user base to offer stock brokerage services with a simple, low-entry trading interface.  
+   - **Impact:** Complements the existing savings and investment products, creating a holistic financial ecosystem.
+
+![Product Expansion Diagram](images/product-expansion.png)
+
+---
+
+## Conclusion
+
+This assignment demonstrates my ability to extract meaningful insights from data and propose actionable strategies. Through a combination of robust SQL analysis and thoughtful business recommendations, I have addressed key areas including sales performance, app usability, and future product expansion for Jar.
+
+Thank you for considering my application for the Business Analyst Internship at Jar.
+
+---
+
+*For any queries or further information, please feel free to reach out.*
+
+---
+
+*Subhrajyoti Mahanta*  
+*Business Analyst Intern Applicant*  
+
+---
+
+Feel free to modify and add any additional images or sections to best suit your repository's structure.
