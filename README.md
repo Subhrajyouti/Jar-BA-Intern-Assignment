@@ -27,7 +27,7 @@ To derive meaningful insights from the data, I followed these key steps:
 2. **Created a PostgreSQL Database**
 3. **Extracted Relevant Information with SQL Queries**
 
-      ![alt text](image-1.png)
+   ![alt text](image-8.png)
 
 ---
 
